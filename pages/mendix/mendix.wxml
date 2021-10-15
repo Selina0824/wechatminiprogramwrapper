@@ -1,0 +1,4 @@
+<!--pages/mendix.wxml-->
+<view class="container">
+    <web-view src="{{url}}" bindmessage="messageHandler" bindload="webViewLoadHander" binderror="webViewErrorHandler"/>
+</view>

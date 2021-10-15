@@ -1,0 +1,4 @@
+<!--pages/image.wxml-->
+<view>
+<image src="{{url}}" bindtap="previewImage"/>
+</view>

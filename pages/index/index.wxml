@@ -1,0 +1,6 @@
+<view class="container log-list">
+  <block>
+    <image class="logo" src="../../assets/mendix.png" />
+    <button bindtap="handleLogin">Login</button>
+  </block>
+</view>
