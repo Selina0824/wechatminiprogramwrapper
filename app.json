@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/mendix/mendix",
     "pages/share/share",
-    "pages/image/image"
+    "pages/image/image",
+    "pages/wxPay/wxPay"
   ],
   "window": {
     "backgroundTextStyle": "light",
