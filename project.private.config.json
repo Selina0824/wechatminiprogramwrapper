@@ -1,0 +1,23 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/wxPay/wxPay",
+          "pathName": "pages/wxPay/wxPay",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
