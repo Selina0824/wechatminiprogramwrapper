@@ -12,7 +12,34 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log(options.payDataStr)
+    wx.showToast({
+      title: '支付成功',
+    })
+    const {timeStamp, nonceStr, prepayId, paySign} = JSON.parse(decodeURIComponent(options.payDataStr))
+    console.log(timeStamp,nonceStr,prepayId,paySign)
+    wx.requestPayment
+    (
+      {
+        "timeStamp": timeStamp,
+        "nonceStr": nonceStr,
+        "package": `prepay_id=${prepayId}`,
+        "signType": "RSA",
+        "paySign": paySign,
+        "success":function(res){
+          wx.showToast({
+            title: 'success',
+          })
+        },
+        "fail":function(res){
+          wx.showToast({
+            title: 'fail',
+          })
+        },
+        "complete":function(res){
+        }
+      }
+    )
+    
   },
 
   /**
