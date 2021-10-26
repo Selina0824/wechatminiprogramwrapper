@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -15,6 +16,12 @@
           "name": "pages/wxPay/wxPay",
           "pathName": "pages/wxPay/wxPay",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/wxPay/wxPay",
+          "pathName": "pages/wxPay/wxPay",
+          "query": "payDataStr=%257B%2522timeStamp%2522%253A%25221635131126%2522%252C%2522nonceStr%2522%253A%2522Cf7GPRp1IclN8Kbj%2522%252C%2522prepayId%2522%253A%2522wx2511052607091006d851552f3140310000%2522%252C%2522paySign%2522%253A%2522VgW2t9gMy6XpVXLJK6doLmaf8bxjcg9D6Qtl8ZneR6J621ZJYNPZ2BVZa6BLk4zUhZWBqpwDXpPJ%252BysJ4XzQ6zQAeIMmjlPsCE7W4qzjocWucGQIH%252BS95RfSaeg8D33fDmqF3rdY0sGoOFVotrACOdYkYfeuLNU4HsHyvFmk07fGekg5jaKcHOr%252FurwN6jNHXMII5rnBdW5pylMSh25IpsLO82xj0DrvTnJYYCROB5sXcX8kfeCxAvTw2qGyOv5LoOl95Ns94sfxuyOb4YT9%252BWHfnebbUds2NuQaRMS1GPqGXUuKlEtXtYbBYnBSq3wibdW1ZMyHJjChA%252B1qcIMPgw%253D%253D%2522%257D",
           "scene": null
         }
       ]

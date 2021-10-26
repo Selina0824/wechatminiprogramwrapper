@@ -1,0 +1,73 @@
+/* for custom modal */
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-content {
+  position: fixed;
+  top: 240rpx;
+  left: 26rpx;
+  z-index: 9500;
+  width: 560rpx;
+  height: 440rpx;
+  overflow: hidden;
+  background: #fff;
+  margin: 0 70rpx;
+  border-radius: 2rpx;
+}
+
+.notice {
+  height: 304rpx;
+  width: 560rpx;
+}
+
+.notice-icon {
+  width: 560rpx;
+  height: 216rpx;
+}
+
+.notice-icon image {
+  width: 180rpx;
+  height: 130rpx;
+  margin-left: 190rpx;
+  margin-top: 102rpx;
+}
+
+.notice-text {
+  padding: 80rpx 52rpx;
+  width: 456rpx;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.ok-btn {
+  width: 64rpx;
+  height: 32rpx;
+  font-size: 32rpx;
+  color: #328af1;
+  float: right;
+  margin-right: 60rpx;
+  margin-top: 74rpx;
+}
+
+.no-btn {
+  width: 100rpx;
+  height: 32rpx;
+  font-size: 32rpx;
+  color:  #FF8686;
+  float: right;
+  margin-right: 60rpx;
+  margin-top: 74rpx;
+}

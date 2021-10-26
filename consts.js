@@ -10,4 +10,7 @@ export const MENDIX_APP = {
   getOpenID(code) {
     return `${this.apiBaseURL()}openidresp?code=${code}`
   },
+  backToWebview(out_trade_no) {
+    return `${this.baseURL}link/orderInfo?out_trade_no=${out_trade_no}`
+  },
 }

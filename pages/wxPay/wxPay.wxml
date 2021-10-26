@@ -1,2 +1,17 @@
 <!--pages/wxPay/wxPay.wxml-->
-<text>pages/wxPay/wxPay.wxml</text>
+<view wx:if ='{{!url}}' class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}" catchtouchmove="true"></view>
+<view wx:if="{{showModal}}">
+	<view class="modal-content">
+		<view class='notice'>
+			<view class='notice-icon'>
+				<image src='/assets/succeed.svg'>
+				</image>
+			</view>
+			<view class='notice-text text-center'>支付成功,您的订单我们将尽快处理。请等待客服与您联系，谢谢。</view>
+		</view>
+		<view class='ok-btn' bindtap="okConfirm">好的</view>
+	</view>
+</view>
+<view wx:else class="container">
+    <web-view src="{{url}}"/>
+</view>

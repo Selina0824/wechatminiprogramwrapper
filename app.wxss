@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import './styles/modal.wxss';
 .container {
   height: 100%;
   display: flex;
