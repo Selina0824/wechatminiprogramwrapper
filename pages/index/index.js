@@ -37,14 +37,10 @@ Page({
       desc: '登录系统',
       success: (res) => {
         const {userInfo} = res
-        const {nickName, avatarUrl} = userInfo
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true,
-        })
-
-        wx.navigateTo({
-          url: `../mendix/mendix?name=${nickName}&avatar=${encodeURIComponent(avatarUrl)}`,
+        const {nickName, avatarUrl} = userInfo;
+        wx.setStorageSync('userInfo',userInfo);
+        wx.redirectTo({
+          url: `../mendix/mendix`,
         })
       },
       error : (e) =>{

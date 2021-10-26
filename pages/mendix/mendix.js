@@ -17,11 +17,18 @@ Page({
       url: '../index/index'
     })
   },
-  onLoad(param) {
-    const {name, avatar} = param
-    this.setData({
-      url: `${MENDIX_APP.webviewURL()}?username=${name}&avatar=${avatar}`
-    })
+  onLoad() {
+    const userInfo = wx.getStorageSync('userInfo');
+    if (userInfo) {
+      const {nickName, avatarUrl} = userInfo; 
+      this.setData({
+        url: `${MENDIX_APP.webviewURL()}?username=${nickName}&avatar=${avatarUrl}`
+      });
+    } else {
+      wx.redirectTo({
+        url: '/pages/index/index',
+      })
+    }
   },
   messageHandler(e){
     console.log(e)

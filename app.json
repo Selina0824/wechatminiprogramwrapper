@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/mendix/mendix",
+    "pages/index/index",
     "pages/share/share",
     "pages/image/image",
     "pages/wxPay/wxPay"
