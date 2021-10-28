@@ -16,9 +16,6 @@ Page({
    */
   onLoad: function (options) {
     const _this = this;
-    wx.showLoading({
-      title: '加载中',
-    })
     const {timeStamp, nonceStr, prepayId, paySign, out_trade_no} = JSON.parse(decodeURIComponent(options.payDataStr));
     wx.requestPayment({
         "timeStamp": timeStamp,
@@ -41,7 +38,6 @@ Page({
           })
         },
         "complete":function(res){
-          wx.hideLoading();
         }
     })
   },
