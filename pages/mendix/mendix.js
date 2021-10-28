@@ -19,11 +19,11 @@ Page({
   },
   onLoad() {
     const userInfo = wx.getStorageSync('userInfo');
-    const openid = wx.getStorageSync('openid');
+    const code = wx.getStorageSync('code');
     if (userInfo) {
       const {nickName, avatarUrl} = userInfo; 
       this.setData({
-        url: `${MENDIX_APP.webviewURL()}?username=${nickName}&avatar=${avatarUrl}&openid=${openid}`
+        url: `${MENDIX_APP.webviewURL()}?username=${nickName}&avatar=${avatarUrl}&code=${code}`
       });
     } else {
       wx.redirectTo({
