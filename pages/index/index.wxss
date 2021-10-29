@@ -29,7 +29,7 @@
   margin-top: 50rpx;
 }
 .tips{
-  margin: 120rpx;
+  width: 500rpx;
   position: fixed;
   bottom: 60rpx;
 }

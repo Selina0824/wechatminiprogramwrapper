@@ -19,6 +19,7 @@ Page({
   },
   onLoad() {
     const userInfo = wx.getStorageSync('userInfo');
+  
     const code = wx.getStorageSync('code');
     if (userInfo) {
       const {nickName, avatarUrl} = userInfo; 
