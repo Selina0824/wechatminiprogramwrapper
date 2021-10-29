@@ -19,14 +19,17 @@ Page({
   },
   onLoad() {
     const userInfo = wx.getStorageSync('userInfo');
-  
-    const code = wx.getStorageSync('code');
     if (userInfo) {
       const {nickName, avatarUrl} = userInfo; 
-      console.log(nickName,avatarUrl)
-      this.setData({
-        url: `${MENDIX_APP.webviewURL()}?username=${nickName}&avatar=${avatarUrl}&code=${code}`
-      });
+      // 登录
+      wx.login({
+        success: (res) => {
+          const { code } = res;
+          this.setData({
+            url: `${MENDIX_APP.webviewURL()}?username=${nickName}&avatar=${avatarUrl}&code=${code}`
+          });
+        },
+      })
     } else {
       wx.redirectTo({
         url: '/pages/index/index',
