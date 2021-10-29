@@ -22,6 +22,7 @@ Page({
     const code = wx.getStorageSync('code');
     if (userInfo) {
       const {nickName, avatarUrl} = userInfo; 
+      console.log(nickName,avatarUrl)
       this.setData({
         url: `${MENDIX_APP.webviewURL()}?username=${nickName}&avatar=${avatarUrl}&code=${code}`
       });

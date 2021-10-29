@@ -36,8 +36,7 @@ Page({
     wx.getUserProfile({
       desc: '登录系统',
       success: (res) => {
-        const {userInfo} = res
-        const {nickName, avatarUrl} = userInfo;
+        const {userInfo} = res;
         wx.setStorageSync('userInfo',userInfo);
         wx.redirectTo({
           url: `../mendix/mendix`,
@@ -48,7 +47,16 @@ Page({
       }
     })
   },
-
+  handleNotLogin(){
+    const userInfo = {
+      avatarUrl: "https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132",
+      nickName: "微信用户"
+    };
+    wx.setStorageSync('userInfo',userInfo);
+    wx.redirectTo({
+      url: `../mendix/mendix`,
+    })
+  },
   webViewEventHandere(e){
     console.log(e)
   },
