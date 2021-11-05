@@ -22,3 +22,14 @@
   height: 115px;
   margin-bottom: 2rem;
 }
+.not-login {
+  color: gray;
+  /* font-weight: 200; */
+  font-size: 28rpx;
+  margin-top: 50rpx;
+}
+.tips{
+  width: 500rpx;
+  position: fixed;
+  bottom: 60rpx;
+}

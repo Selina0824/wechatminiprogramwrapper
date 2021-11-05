@@ -1,6 +1,10 @@
 <view class="container log-list">
   <block>
     <image class="logo" src="../../assets/mendix.png" />
-    <button bindtap="handleLogin">Login</button>
+    <button type="default" bindtap="handleLogin">Login</button>
+    <text class='not-login' bindtap="handleNotLogin"> Not Login Now</text>
+  </block>
+  <block>
+    <text class="tips">Tips: 登录仅用于获取微信昵称和头像等信息，以获得更好的体验</text>
   </block>
 </view>
