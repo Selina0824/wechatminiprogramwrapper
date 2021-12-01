@@ -1,6 +1,7 @@
 export const MENDIX_APP = {
   // baseURL: 'http://localhost:8080/',
   baseURL: 'https://cdn.mendix-dev.kyleliu.top/',
+  baseURL_MendixAppGallery: 'https://mxappfinder.cevent.com.cn',
   webviewURL() {
     return this.baseURL + 'link/wechat'
   },

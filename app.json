@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/mendix/mendix",
+    "pages/mendixAppGallery/mendixAppGallery",
     "pages/share/share",
     "pages/image/image",
     "pages/wxPay/wxPay"

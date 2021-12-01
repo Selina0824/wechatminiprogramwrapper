@@ -47,7 +47,7 @@ Page({
       }
     })
   },
-  handleNotLogin(){
+  handleLoginToWechatAPIExplorer(){
     const userInfo = {
       avatarUrl: "https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132",
       nickName: "微信用户"
@@ -55,6 +55,11 @@ Page({
     wx.setStorageSync('userInfo',userInfo);
     wx.redirectTo({
       url: `../mendix/mendix`,
+    })
+  },
+  handleNavToAppGallery(){
+    wx.navigateTo({
+      url: '../mendixAppGallery/mendixAppGallery',
     })
   },
   webViewEventHandere(e){

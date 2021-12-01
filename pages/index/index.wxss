@@ -22,6 +22,11 @@
   height: 115px;
   margin-bottom: 2rem;
 }
+.app-btn {
+  width:fit-content !important;
+  margin-top: 2rem;
+  padding: 1rem;
+}
 .not-login {
   color: gray;
   /* font-weight: 200; */

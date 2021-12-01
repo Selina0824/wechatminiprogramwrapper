@@ -1,8 +1,9 @@
 <view class="container log-list">
   <block>
     <image class="logo" src="../../assets/mendix.png" />
-    <button type="default" bindtap="handleLogin">Login</button>
-    <text class='not-login' bindtap="handleNotLogin"> Not Login Now</text>
+    <button class="app-btn" type="default" bindtap="handleLoginToWechatAPIExplorer">Mendix集成微信API</button>
+    <button class="app-btn" type="primary" bindtap="handleNavToAppGallery">Mendix应用程序库</button>
+    <!-- <text class='not-login' bindtap="handleNotLogin"> Not Login Now</text> -->
   </block>
   <block>
     <text class="tips">Tips: 登录仅用于获取微信昵称和头像等信息，以获得更好的体验</text>
