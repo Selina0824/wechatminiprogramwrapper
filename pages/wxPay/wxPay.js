@@ -8,6 +8,7 @@ Page({
   data: {
     showModal: false,
     out_trade_no:'',
+    msgTemplateId:'',
     url: ''
   },
 
@@ -16,7 +17,7 @@ Page({
    */
   onLoad: function (options) {
     const _this = this;
-    const {timeStamp, nonceStr, prepayId, paySign, out_trade_no} = JSON.parse(decodeURIComponent(options.payDataStr));
+    const {timeStamp, nonceStr, prepayId, paySign, out_trade_no, msgTemplateId} = JSON.parse(decodeURIComponent(options.payDataStr));
     wx.requestPayment({
         "timeStamp": timeStamp,
         "nonceStr": nonceStr,
@@ -27,7 +28,8 @@ Page({
           if (res.errMsg === "requestPayment:ok") {
             _this.setData({
               showModal: true,
-              out_trade_no
+              out_trade_no,
+              msgTemplateId: msgTemplateId
             })
           }
         },
@@ -43,6 +45,16 @@ Page({
   },
   okConfirm() {
     this.hideModal();
+    wx.requestSubscribeMessage({
+      tmplIds: [this.data.msgTemplateId],
+      success(res) {
+        console.log('Requested subscribe message successfully')
+      },
+      fail(res) {
+        console.log('Failed to request subscribe message')
+        console.log(res)
+      }
+    })
     this.setData({
       url: `${MENDIX_APP.backToWebview(this.data.out_trade_no)}`
     })
