@@ -16,7 +16,7 @@ Page({
    */
   onLoad: function (options) {
     const _this = this;
-    const {timeStamp, nonceStr, prepayId, paySign, out_trade_no} = JSON.parse(decodeURIComponent(options.payDataStr));
+    const {timeStamp, nonceStr, prepayId, paySign, out_trade_no, msgTemplateId} = JSON.parse(decodeURIComponent(options.payDataStr));
     wx.requestPayment({
         "timeStamp": timeStamp,
         "nonceStr": nonceStr,
@@ -25,6 +25,16 @@ Page({
         "paySign": paySign,
         "success":function(res){
           if (res.errMsg === "requestPayment:ok") {
+            wx.requestSubscribeMessage({
+              tmplIds: [msgTemplateId],
+              success(res) {
+                console.log('Requested subscribe message successfully')
+              },
+              fail(res) {
+                console.log('Failed to request subscribe message')
+                console.log(res)
+              }
+            })
             _this.setData({
               showModal: true,
               out_trade_no
